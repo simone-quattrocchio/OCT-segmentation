@@ -20,6 +20,8 @@ Two models were implemented:
 - **U-Net++** (Zhou et al.)
 
 Training was performed with PyTorch using both **Dice Loss** and **Binary Cross Entropy**, with early stopping and data balancing strategies.
+<img width="1003" height="335" alt="image" src="https://github.com/user-attachments/assets/4d03c847-1130-4644-a1e6-5e81706f131f" />
+
 
 ## 📊 Results
 
@@ -29,7 +31,7 @@ Training was performed with PyTorch using both **Dice Loss** and **Binary Cross 
 - Data preprocessing and postprocessing had a greater impact than architecture choice
 
 ## Usage
-For importing the model and use the trained weights use 'Submission.ipnyb/' and download the wieghts 'final_checkpoint.pth/' and follow instruction; note that the format of data must be coherent with the trained data (16 bit precision .mat file with 800x1200 dimensions) and quality of detection depends on similarity to trained data.
+For importing the model and use the trained weights use 'Submission.ipnyb/' and download the weights by requesting them and follow instruction; note that the format of data must be coherent with the trained data (16 bit precision .mat file with 800x1200 dimensions) and quality of detection depends on similarity to trained data.
 
 ## 📁 Project Structure
 
