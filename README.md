@@ -29,6 +29,7 @@ Training was performed with PyTorch using both **Dice Loss** and **Binary Cross 
 - Average Dice 3D score: **~0.87**
 - Organ count error reduced with **opening morphological filter**
 - Data preprocessing and postprocessing had a greater impact than architecture choice
+<img width="710" height="297" alt="image" src="https://github.com/user-attachments/assets/aa22fdc0-7fb6-42c5-a61a-c3c156dbc84d" />
 
 ## Usage
 For importing the model and use the trained weights use 'Submission.ipnyb/' and download the weights by requesting them and follow instruction; note that the format of data must be coherent with the trained data (16 bit precision .mat file with 800x1200 dimensions) and quality of detection depends on similarity to trained data.
