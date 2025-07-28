@@ -34,7 +34,7 @@ See `src/` for full implementation details.
 
 ## 📘 Report
 
-For full documentation (in Italian): `Challenge_OCT_Gruppo FB14 Relazione.pdf'
+For full documentation (in Italian): `Challenge_OCT_Gruppo FB14 Relazione.pdf/'
 
 ## 👨‍💻 Author
 
