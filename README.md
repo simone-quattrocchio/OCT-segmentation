@@ -1,49 +1,89 @@
-# OCT Organoid Segmentation with Deep LearningThis repository contains python code for segmentation of tumor organoids in a volume of OCT medical images (Optical Coherence Tomography).
-This project focuses on the **automated segmentation of 3D tumor organoids** in volumetric **Optical Coherence Tomography (OCT)** images using deep learning techniques.
-This is done by using a pipeline that starting from raw 16-bit volumes returns the corresponding binary masks of each slice; the pipeline is made up of: (1) a first prepocesssing step, (2) application of deep learning model and (3) postprocessing.
-The deep learning model is trained by using PyTorch framework and UNet inspired architetture
-The deep learning algorithm was trained on control volumes in which organoids were grown over several weeks. 
-## 🔍 Objective
+🧬 OCT Organoid Segmentation with Deep Learning
+This repository contains Python code for the automated segmentation of 3D tumor organoids in Optical Coherence Tomography (OCT) volumetric images using deep learning techniques.
 
-To develop and evaluate a **3D segmentation pipeline** capable of identifying and counting organoids in noisy, high-resolution OCT scans using:
+The proposed pipeline takes raw 16-bit OCT volumes and produces corresponding binary masks for each slice. The main stages are:
 
-- U-Net and U-Net++ architectures
-- Preprocessing techniques (denoising, CLAHE)
-- Data augmentation (Albumentations)
-- Morphological post-processing
-- Dice coefficient and count error metrics
+Preprocessing
 
-## 🧠 Model
+Deep learning-based segmentation
 
-Two models were implemented:
-- **U-Net** (standard)
-- **U-Net++** (Zhou et al.)
+Postprocessing
 
-Training was performed with PyTorch using both **Dice Loss** and **Binary Cross Entropy**, with early stopping and data balancing strategies.
-<img width="1003" height="335" alt="image" src="https://github.com/user-attachments/assets/4d03c847-1130-4644-a1e6-5e81706f131f" />
+The model is implemented using the PyTorch framework and is based on U-Net-inspired architectures.
 
+⚠️ Due to privacy restrictions, training data and final results cannot be displayed. However, the model weights are provided for use on similar datasets.
 
-## 📊 Results
+🔍 Objective
+To develop and evaluate a 3D segmentation pipeline capable of identifying and counting organoids in noisy, high-resolution OCT volumes. The approach integrates:
 
-- Best model: **U-Net++ + BCE Loss**
-- Average Dice 3D score: **~0.87**
-- Organ count error reduced with **opening morphological filter**
-- Data preprocessing and postprocessing had a greater impact than architecture choice
-<img width="710" height="297" alt="image" src="https://github.com/user-attachments/assets/aa22fdc0-7fb6-42c5-a61a-c3c156dbc84d" />
+U-Net and U-Net++ architectures
 
-## Usage
-For importing the model and use the trained weights use 'Submission.ipnyb/' and download the weights by requesting them and follow instruction; note that the format of data must be coherent with the trained data (16 bit precision .mat file with 800x1200 dimensions) and quality of detection depends on similarity to trained data.
+Preprocessing (e.g., denoising, CLAHE)
 
-## 📁 Project Structure
+Data augmentation using Albumentations
 
-See `src/` for full implementation details.
+Morphological postprocessing
 
-## 📘 Report
+Evaluation using Dice coefficient and count error metrics
 
-For full documentation (in Italian): `Challenge_OCT_Gruppo FB14 Relazione.pdf/'
+🧠 Model Overview
+Two architectures were implemented and compared:
 
-## 👨‍💻 Author
+U-Net (baseline)
 
-**Simone Quattrocchio**  
-MSc Biomedical Engineering – Politecnico di Torino  
-[LinkedIn](https://www.linkedin.com/in/simone-quattrocchio-468428234/)
+U-Net++ (Zhou et al.)
+
+Training details:
+
+Loss functions: Dice Loss + Binary Cross Entropy (BCE)
+
+Framework: PyTorch
+
+Additional strategies: early stopping, class balancing, and augmentation
+
+<p align="center"> <img width="1003" height="335" alt="model" src="https://github.com/user-attachments/assets/4d03c847-1130-4644-a1e6-5e81706f131f" /> </p>
+📊 Results Summary
+Best-performing model: U-Net++ with BCE Loss
+
+Average 3D Dice Score: ~0.87
+
+Organ count error reduced using morphological filters
+
+Pre/post-processing steps had greater impact than architecture choice
+
+<p align="center"> <img width="710" height="297" alt="results" src="https://github.com/user-attachments/assets/aa22fdc0-7fb6-42c5-a61a-c3c156dbc84d" /> </p>
+🚀 Usage
+To use the trained model:
+
+Open Submission.ipynb
+
+Download the model weights (available on request)
+
+Ensure your data is in the correct format:
+
+.mat file
+
+16-bit depth
+
+800x1200 resolution
+
+Follow the notebook instructions to run inference.
+
+⚠️ Detection performance depends on the similarity of input data to the training distribution.
+
+📁 Project Structure
+Folder	Description
+estrazione dataset/	Prepares and organizes the raw dataset
+datasplit/	Splits data into training, validation, and test sets
+allenamento_rete_neurale/	Model training, augmentation with Albumentations, loss/metric setup
+calcolo_performance/	Evaluation: Dice score and organoid count error
+slicer/	Exports results for visualization in 3D Slicer
+
+📘 Report
+For full technical documentation (in Italian):
+📄 Challenge_OCT_Gruppo FB14 Relazione.pdf
+
+👨‍💻 Author
+Simone Quattrocchio
+MSc Biomedical Engineering – Politecnico di Torino
+🔗 LinkedIn
