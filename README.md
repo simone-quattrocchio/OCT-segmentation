@@ -59,7 +59,7 @@ Training details:
 
 To use the trained model:
 1. Open `Submission.ipynb`
-2. Download the model weights (available on request)
+2. Download the model weights (available on request on https://drive.google.com/file/d/15JmIfCIxQdFuNeeiRHCColmYFoQHx4zj/view?usp=drive_link)
 3. Ensure your data is in the correct format:
    - `.mat` file
    - 16-bit depth
