@@ -1,0 +1,14 @@
+numpy
+matplotlib
+scikit-image
+scipy
+opencv-python
+pillow
+tqdm
+albumentations
+torch
+torchvision
+torchaudio
+nibabel
+jupyter
+notebook
