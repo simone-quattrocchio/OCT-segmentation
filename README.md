@@ -30,11 +30,11 @@ Training was performed with PyTorch using both **Dice Loss** and **Binary Cross 
 
 ## 📁 Project Structure
 
-See `src/`, `data/`, and `notebooks/` for full implementation details.
+See `src/` for full implementation details.
 
 ## 📘 Report
 
-For full documentation (in Italian): 
+For full documentation (in Italian): `Challenge_OCT_Gruppo FB14 Relazione.pdf'
 
 ## 👨‍💻 Author
 
