@@ -28,6 +28,9 @@ Training was performed with PyTorch using both **Dice Loss** and **Binary Cross 
 - Organ count error reduced with **opening morphological filter**
 - Data preprocessing and postprocessing had a greater impact than architecture choice
 
+## Usage
+For importing the model and use the trained weights use 'Submission.ipnyb/' and download the wieghts 'final_checkpoint.pth/' and follow instruction; note that the format of data must be coherent with the trained data (16 bit precision .mat file with 800x1200 dimensions) and quality of detection depends on similarity to trained data.
+
 ## 📁 Project Structure
 
 See `src/` for full implementation details.
